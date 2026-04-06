@@ -1,0 +1,24 @@
+[project]
+name = "fiis-optimal-queue"
+version = "1.0.0"
+description = "Optimización de Mesa de Partes FIIS-UNI: codificación de Huffman + árbol de decisión binario (Matemática Discreta, FIIS-UNI 2026-1)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Hector-0-0" }]
+dependencies = [
+    "networkx>=3.0",
+    "matplotlib>=3.7",
+]
+
+[dependency-groups]
+dev = [
+    "pyflakes>=3.0",
+    "pytest>=9.1.1",
+]
+
+# El proyecto es una aplicación (no una librería instalable). Importamos
+# `src` como paquete local desde la raíz, así que uv no debe construir/instalar
+# el proyecto como wheel.
+[tool.uv]
+package = false

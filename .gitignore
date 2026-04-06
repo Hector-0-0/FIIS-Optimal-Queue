@@ -1,0 +1,20 @@
+# Entorno virtual gestionado por uv
+.venv/
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de bloqueo de LibreOffice (al editar el .docx del artículo)
+.~lock.*#
+
+# Versión simplificada para la exposición. Se mantiene en local para poder
+# proyectarla en clase, pero no forma parte de este repositorio.
+presentacion/
+
+# Sistema operativo / editores
+.DS_Store
+*.swp
+.idea/
+.vscode/
