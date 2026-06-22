@@ -1,0 +1,524 @@
+{
+  "distribucion": {
+    "T01_Constancia_Matricula": 0.25,
+    "T02_Record_Academico": 0.15,
+    "T03_Certificado_Estudios_Simple": 0.12,
+    "T04_Retiro_Asignatura": 0.1,
+    "T05_Orden_Merito": 0.08,
+    "T06_Rectificacion_Notas": 0.07,
+    "T07_Retiro_Curso": 0.05,
+    "T08_Duplicado_Carnet": 0.04,
+    "T09_Reserva_Matricula": 0.03,
+    "T10_Retiro_Ciclo": 0.02,
+    "T11_Reincorporacion": 0.02,
+    "T12_Constancia_No_Adeudo": 0.015,
+    "T13_Examen_Subsanacion": 0.015,
+    "T14_Examen_Regularizacion": 0.01,
+    "T15_Constancia_Egresado": 0.01,
+    "T16_Expedito_Bachiller": 0.008,
+    "T17_Titulo_Profesional": 0.005,
+    "T18_Bienestar_Universitario": 0.005,
+    "T19_Traslado_Interno": 0.001,
+    "T20_Traslado_Externo": 0.001
+  },
+  "codigos": {
+    "T11_Reincorporacion": "00000",
+    "T15_Constancia_Egresado": "000010",
+    "T18_Bienestar_Universitario": "0000110",
+    "T19_Traslado_Interno": "000011100",
+    "T20_Traslado_Externo": "000011101",
+    "T17_Titulo_Profesional": "00001111",
+    "T07_Retiro_Curso": "0001",
+    "T04_Retiro_Asignatura": "001",
+    "T01_Constancia_Matricula": "01",
+    "T03_Certificado_Estudios_Simple": "100",
+    "T09_Reserva_Matricula": "10100",
+    "T12_Constancia_No_Adeudo": "101010",
+    "T13_Examen_Subsanacion": "101011",
+    "T06_Rectificacion_Notas": "1011",
+    "T02_Record_Academico": "110",
+    "T16_Expedito_Bachiller": "1110000",
+    "T14_Examen_Regularizacion": "1110001",
+    "T10_Retiro_Ciclo": "111001",
+    "T08_Duplicado_Carnet": "11101",
+    "T05_Orden_Merito": "1111"
+  },
+  "longitudes": {
+    "T11_Reincorporacion": 5,
+    "T15_Constancia_Egresado": 6,
+    "T18_Bienestar_Universitario": 7,
+    "T19_Traslado_Interno": 9,
+    "T20_Traslado_Externo": 9,
+    "T17_Titulo_Profesional": 8,
+    "T07_Retiro_Curso": 4,
+    "T04_Retiro_Asignatura": 3,
+    "T01_Constancia_Matricula": 2,
+    "T03_Certificado_Estudios_Simple": 3,
+    "T09_Reserva_Matricula": 5,
+    "T12_Constancia_No_Adeudo": 6,
+    "T13_Examen_Subsanacion": 6,
+    "T06_Rectificacion_Notas": 4,
+    "T02_Record_Academico": 3,
+    "T16_Expedito_Bachiller": 7,
+    "T14_Examen_Regularizacion": 7,
+    "T10_Retiro_Ciclo": 6,
+    "T08_Duplicado_Carnet": 5,
+    "T05_Orden_Merito": 4
+  },
+  "metricas": {
+    "L_huffman": 3.439,
+    "H_entropia": 3.415981,
+    "eficiencia_pct": 99.3306,
+    "ahorro_vs_fijo_pct": 31.22,
+    "kraft_sum": 1.0,
+    "verificacion_shannon": true,
+    "L_fijo": 5
+  },
+  "iteraciones": [
+    {
+      "iter": 1,
+      "nodo_izq": "T19",
+      "peso_izq": 0.001,
+      "nodo_der": "T20",
+      "peso_der": 0.001,
+      "nodo_nuevo": "N01",
+      "peso_nuevo": 0.002
+    },
+    {
+      "iter": 2,
+      "nodo_izq": "N01",
+      "peso_izq": 0.002,
+      "nodo_der": "T17",
+      "peso_der": 0.005,
+      "nodo_nuevo": "N02",
+      "peso_nuevo": 0.007
+    },
+    {
+      "iter": 3,
+      "nodo_izq": "T18",
+      "peso_izq": 0.005,
+      "nodo_der": "N02",
+      "peso_der": 0.007,
+      "nodo_nuevo": "N03",
+      "peso_nuevo": 0.012
+    },
+    {
+      "iter": 4,
+      "nodo_izq": "T16",
+      "peso_izq": 0.008,
+      "nodo_der": "T14",
+      "peso_der": 0.01,
+      "nodo_nuevo": "N04",
+      "peso_nuevo": 0.018
+    },
+    {
+      "iter": 5,
+      "nodo_izq": "T15",
+      "peso_izq": 0.01,
+      "nodo_der": "N03",
+      "peso_der": 0.012,
+      "nodo_nuevo": "N05",
+      "peso_nuevo": 0.022
+    },
+    {
+      "iter": 6,
+      "nodo_izq": "T12",
+      "peso_izq": 0.015,
+      "nodo_der": "T13",
+      "peso_der": 0.015,
+      "nodo_nuevo": "N06",
+      "peso_nuevo": 0.03
+    },
+    {
+      "iter": 7,
+      "nodo_izq": "N04",
+      "peso_izq": 0.018,
+      "nodo_der": "T10",
+      "peso_der": 0.02,
+      "nodo_nuevo": "N07",
+      "peso_nuevo": 0.038
+    },
+    {
+      "iter": 8,
+      "nodo_izq": "T11",
+      "peso_izq": 0.02,
+      "nodo_der": "N05",
+      "peso_der": 0.022,
+      "nodo_nuevo": "N08",
+      "peso_nuevo": 0.042
+    },
+    {
+      "iter": 9,
+      "nodo_izq": "T09",
+      "peso_izq": 0.03,
+      "nodo_der": "N06",
+      "peso_der": 0.03,
+      "nodo_nuevo": "N09",
+      "peso_nuevo": 0.06
+    },
+    {
+      "iter": 10,
+      "nodo_izq": "N07",
+      "peso_izq": 0.038,
+      "nodo_der": "T08",
+      "peso_der": 0.04,
+      "nodo_nuevo": "N10",
+      "peso_nuevo": 0.078
+    },
+    {
+      "iter": 11,
+      "nodo_izq": "N08",
+      "peso_izq": 0.042,
+      "nodo_der": "T07",
+      "peso_der": 0.05,
+      "nodo_nuevo": "N11",
+      "peso_nuevo": 0.092
+    },
+    {
+      "iter": 12,
+      "nodo_izq": "N09",
+      "peso_izq": 0.06,
+      "nodo_der": "T06",
+      "peso_der": 0.07,
+      "nodo_nuevo": "N12",
+      "peso_nuevo": 0.13
+    },
+    {
+      "iter": 13,
+      "nodo_izq": "N10",
+      "peso_izq": 0.078,
+      "nodo_der": "T05",
+      "peso_der": 0.08,
+      "nodo_nuevo": "N13",
+      "peso_nuevo": 0.158
+    },
+    {
+      "iter": 14,
+      "nodo_izq": "N11",
+      "peso_izq": 0.092,
+      "nodo_der": "T04",
+      "peso_der": 0.1,
+      "nodo_nuevo": "N14",
+      "peso_nuevo": 0.192
+    },
+    {
+      "iter": 15,
+      "nodo_izq": "T03",
+      "peso_izq": 0.12,
+      "nodo_der": "N12",
+      "peso_der": 0.13,
+      "nodo_nuevo": "N15",
+      "peso_nuevo": 0.25
+    },
+    {
+      "iter": 16,
+      "nodo_izq": "T02",
+      "peso_izq": 0.15,
+      "nodo_der": "N13",
+      "peso_der": 0.158,
+      "nodo_nuevo": "N16",
+      "peso_nuevo": 0.308
+    },
+    {
+      "iter": 17,
+      "nodo_izq": "N14",
+      "peso_izq": 0.192,
+      "nodo_der": "T01",
+      "peso_der": 0.25,
+      "nodo_nuevo": "N17",
+      "peso_nuevo": 0.442
+    },
+    {
+      "iter": 18,
+      "nodo_izq": "N15",
+      "peso_izq": 0.25,
+      "nodo_der": "N16",
+      "peso_der": 0.308,
+      "nodo_nuevo": "N18",
+      "peso_nuevo": 0.558
+    },
+    {
+      "iter": 19,
+      "nodo_izq": "N17",
+      "peso_izq": 0.442,
+      "nodo_der": "N18",
+      "peso_der": 0.558,
+      "nodo_nuevo": "N19",
+      "peso_nuevo": 1.0
+    }
+  ],
+  "arbol": {
+    "nombre": "ROOT",
+    "peso": 1.0,
+    "symbol": null,
+    "is_leaf": false,
+    "left": {
+      "nombre": "N17",
+      "peso": 0.442,
+      "symbol": null,
+      "is_leaf": false,
+      "left": {
+        "nombre": "N14",
+        "peso": 0.192,
+        "symbol": null,
+        "is_leaf": false,
+        "left": {
+          "nombre": "N11",
+          "peso": 0.092,
+          "symbol": null,
+          "is_leaf": false,
+          "left": {
+            "nombre": "N08",
+            "peso": 0.042,
+            "symbol": null,
+            "is_leaf": false,
+            "left": {
+              "nombre": "T11",
+              "peso": 0.02,
+              "symbol": "T11_Reincorporacion",
+              "is_leaf": true,
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "nombre": "N05",
+              "peso": 0.022,
+              "symbol": null,
+              "is_leaf": false,
+              "left": {
+                "nombre": "T15",
+                "peso": 0.01,
+                "symbol": "T15_Constancia_Egresado",
+                "is_leaf": true,
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "nombre": "N03",
+                "peso": 0.012,
+                "symbol": null,
+                "is_leaf": false,
+                "left": {
+                  "nombre": "T18",
+                  "peso": 0.005,
+                  "symbol": "T18_Bienestar_Universitario",
+                  "is_leaf": true,
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "nombre": "N02",
+                  "peso": 0.007,
+                  "symbol": null,
+                  "is_leaf": false,
+                  "left": {
+                    "nombre": "N01",
+                    "peso": 0.002,
+                    "symbol": null,
+                    "is_leaf": false,
+                    "left": {
+                      "nombre": "T19",
+                      "peso": 0.001,
+                      "symbol": "T19_Traslado_Interno",
+                      "is_leaf": true,
+                      "left": null,
+                      "right": null
+                    },
+                    "right": {
+                      "nombre": "T20",
+                      "peso": 0.001,
+                      "symbol": "T20_Traslado_Externo",
+                      "is_leaf": true,
+                      "left": null,
+                      "right": null
+                    }
+                  },
+                  "right": {
+                    "nombre": "T17",
+                    "peso": 0.005,
+                    "symbol": "T17_Titulo_Profesional",
+                    "is_leaf": true,
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "nombre": "T07",
+            "peso": 0.05,
+            "symbol": "T07_Retiro_Curso",
+            "is_leaf": true,
+            "left": null,
+            "right": null
+          }
+        },
+        "right": {
+          "nombre": "T04",
+          "peso": 0.1,
+          "symbol": "T04_Retiro_Asignatura",
+          "is_leaf": true,
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "nombre": "T01",
+        "peso": 0.25,
+        "symbol": "T01_Constancia_Matricula",
+        "is_leaf": true,
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "nombre": "N18",
+      "peso": 0.558,
+      "symbol": null,
+      "is_leaf": false,
+      "left": {
+        "nombre": "N15",
+        "peso": 0.25,
+        "symbol": null,
+        "is_leaf": false,
+        "left": {
+          "nombre": "T03",
+          "peso": 0.12,
+          "symbol": "T03_Certificado_Estudios_Simple",
+          "is_leaf": true,
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "nombre": "N12",
+          "peso": 0.13,
+          "symbol": null,
+          "is_leaf": false,
+          "left": {
+            "nombre": "N09",
+            "peso": 0.06,
+            "symbol": null,
+            "is_leaf": false,
+            "left": {
+              "nombre": "T09",
+              "peso": 0.03,
+              "symbol": "T09_Reserva_Matricula",
+              "is_leaf": true,
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "nombre": "N06",
+              "peso": 0.03,
+              "symbol": null,
+              "is_leaf": false,
+              "left": {
+                "nombre": "T12",
+                "peso": 0.015,
+                "symbol": "T12_Constancia_No_Adeudo",
+                "is_leaf": true,
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "nombre": "T13",
+                "peso": 0.015,
+                "symbol": "T13_Examen_Subsanacion",
+                "is_leaf": true,
+                "left": null,
+                "right": null
+              }
+            }
+          },
+          "right": {
+            "nombre": "T06",
+            "peso": 0.07,
+            "symbol": "T06_Rectificacion_Notas",
+            "is_leaf": true,
+            "left": null,
+            "right": null
+          }
+        }
+      },
+      "right": {
+        "nombre": "N16",
+        "peso": 0.308,
+        "symbol": null,
+        "is_leaf": false,
+        "left": {
+          "nombre": "T02",
+          "peso": 0.15,
+          "symbol": "T02_Record_Academico",
+          "is_leaf": true,
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "nombre": "N13",
+          "peso": 0.158,
+          "symbol": null,
+          "is_leaf": false,
+          "left": {
+            "nombre": "N10",
+            "peso": 0.078,
+            "symbol": null,
+            "is_leaf": false,
+            "left": {
+              "nombre": "N07",
+              "peso": 0.038,
+              "symbol": null,
+              "is_leaf": false,
+              "left": {
+                "nombre": "N04",
+                "peso": 0.018,
+                "symbol": null,
+                "is_leaf": false,
+                "left": {
+                  "nombre": "T16",
+                  "peso": 0.008,
+                  "symbol": "T16_Expedito_Bachiller",
+                  "is_leaf": true,
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "nombre": "T14",
+                  "peso": 0.01,
+                  "symbol": "T14_Examen_Regularizacion",
+                  "is_leaf": true,
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "nombre": "T10",
+                "peso": 0.02,
+                "symbol": "T10_Retiro_Ciclo",
+                "is_leaf": true,
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "nombre": "T08",
+              "peso": 0.04,
+              "symbol": "T08_Duplicado_Carnet",
+              "is_leaf": true,
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "nombre": "T05",
+            "peso": 0.08,
+            "symbol": "T05_Orden_Merito",
+            "is_leaf": true,
+            "left": null,
+            "right": null
+          }
+        }
+      }
+    }
+  }
+}

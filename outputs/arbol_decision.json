@@ -1,0 +1,163 @@
+{
+  "nodos": [
+    {
+      "id": "v0",
+      "tipo": "raiz",
+      "label": "v₀\nLectura\nde Carnet",
+      "color": "#37474F"
+    },
+    {
+      "id": "v1",
+      "tipo": "intermedio",
+      "label": "v₁\n¿Atención\nPreferencial?\n(Ley N°28683)",
+      "color": "#6A1B9A",
+      "predicado": "¿atencion_preferencial == True?\n(gestante | adulto ≥60 | discapacidad | acompaña niño)\nFuente: Ley N° 28683"
+    },
+    {
+      "id": "v2",
+      "tipo": "intermedio",
+      "label": "v₂\n¿Expediente\nCompleto?\n(TUPA UNI 2024)",
+      "color": "#E65100",
+      "predicado": "¿expediente_completo == True?\n(pago cancelado + requisitos TUPA completos)\nFuente: TUPA UNI 2024"
+    },
+    {
+      "id": "v3",
+      "tipo": "intermedio",
+      "label": "v₃\n¿Aprobación\nAutomática?\n(TUPA UNI 2024)",
+      "color": "#1565C0",
+      "predicado": "¿calificacion_tupa == 'aprobacion_automatica'?\n(2–5 días hábiles, sin evaluación discrecional)\nFuente: TUPA UNI 2024"
+    },
+    {
+      "id": "v4",
+      "tipo": "hoja",
+      "label": "v₄\nV. Preferencial\n(Ley N°28683)\nSin turno",
+      "color": "#6A1B9A",
+      "ventanilla": "V_Preferencial"
+    },
+    {
+      "id": "v5",
+      "tipo": "hoja",
+      "label": "v₅\nOrientación/Caja\nExpediente\nIncompleto",
+      "color": "#E65100",
+      "ventanilla": "V_Orientacion_Caja"
+    },
+    {
+      "id": "v6",
+      "tipo": "hoja",
+      "label": "v₆\nV1 Express\nAprobación\nAutomática",
+      "color": "#2E7D32",
+      "ventanilla": "V1_Express_Automatica"
+    },
+    {
+      "id": "v7",
+      "tipo": "hoja",
+      "label": "v₇\nV1 General\nEvaluación\nPrevia",
+      "color": "#1565C0",
+      "ventanilla": "V1_General_Evaluacion"
+    }
+  ],
+  "aristas": [
+    {
+      "u": "v0",
+      "v": "v1",
+      "etiqueta": "",
+      "descripcion": "inicio → primera validación"
+    },
+    {
+      "u": "v1",
+      "v": "v4",
+      "etiqueta": "1",
+      "descripcion": "SÍ → Ventanilla Preferencial (Ley 28683)"
+    },
+    {
+      "u": "v1",
+      "v": "v2",
+      "etiqueta": "0",
+      "descripcion": "NO → verificar completitud del expediente"
+    },
+    {
+      "u": "v2",
+      "v": "v5",
+      "etiqueta": "0",
+      "descripcion": "NO (incompleto) → Orientación/Caja"
+    },
+    {
+      "u": "v2",
+      "v": "v3",
+      "etiqueta": "1",
+      "descripcion": "SÍ (completo) → clasificar por calificación TUPA"
+    },
+    {
+      "u": "v3",
+      "v": "v6",
+      "etiqueta": "1",
+      "descripcion": "SÍ → Automática → V1 Express (2–5 días)"
+    },
+    {
+      "u": "v3",
+      "v": "v7",
+      "etiqueta": "0",
+      "descripcion": "NO → Eval. Previa → V1 General (10–30 días)"
+    }
+  ],
+  "predicados": {
+    "v1": "¿atencion_preferencial == True?\n(gestante | adulto ≥60 | discapacidad | acompaña niño)\nFuente: Ley N° 28683",
+    "v2": "¿expediente_completo == True?\n(pago cancelado + requisitos TUPA completos)\nFuente: TUPA UNI 2024",
+    "v3": "¿calificacion_tupa == 'aprobacion_automatica'?\n(2–5 días hábiles, sin evaluación discrecional)\nFuente: TUPA UNI 2024"
+  },
+  "fuentes_normativas": {
+    "v1": "Ley N° 28683 (modifica Ley N° 27408) — atención preferencial",
+    "v2": "TUPA UNI 2024, RR N° 3698-2024-UNI — admisibilidad del expediente",
+    "v3": "TUPA UNI 2024, RR N° 3698-2024-UNI — calificación procedimental"
+  },
+  "hojas_ventanilla": {
+    "v4": "V_Preferencial",
+    "v5": "V_Orientacion_Caja",
+    "v6": "V1_Express_Automatica",
+    "v7": "V1_General_Evaluacion"
+  },
+  "validacion": {
+    "es_DAG": true,
+    "es_arbol": true,
+    "unicidad_trayectoria": true,
+    "caminos": [
+      {
+        "hoja": "v4",
+        "ruta": [
+          "v0",
+          "v1",
+          "v4"
+        ]
+      },
+      {
+        "hoja": "v5",
+        "ruta": [
+          "v0",
+          "v1",
+          "v2",
+          "v5"
+        ]
+      },
+      {
+        "hoja": "v6",
+        "ruta": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v6"
+        ]
+      },
+      {
+        "hoja": "v7",
+        "ruta": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v7"
+        ]
+      }
+    ]
+  }
+}
